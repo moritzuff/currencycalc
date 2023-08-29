@@ -25,8 +25,8 @@ public class Currency {
         return loadedAt;
     }
 
-    public double convertTo(double amount, String targetId) {
-        Double exchangeRate = exchangeRates.get(targetId);
+    public double convertTo(String dstId, double amount) {
+        Double exchangeRate = exchangeRates.get(dstId);
         if (exchangeRate == null) {
             return Double.NaN;
         }
